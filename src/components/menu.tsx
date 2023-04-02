@@ -1,13 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { useParams, usePathname } from 'next/navigation'
+import { useParams } from 'next/navigation'
 
 type Props = {
   items: { slug: string }[]
 }
 export function Menu({ items }: Props) {
-  const pathname = usePathname()
   const locale = useParams()?.locale
 
   return (
